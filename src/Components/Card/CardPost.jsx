@@ -9,9 +9,7 @@ const CardPost = () => {
   return (
     <>
       <article>
-        <div
-          className="grid grid-rows-02  gap-1 border-b border-gray-300 w-full h-fit py-4"
-        >
+        <div className="grid grid-rows-02  gap-1 rounded-xl  hover:scale-101 transition-transform duration-[500ms] ease-in-out backdrop-blur-[100px] border border-solid-[rgba(255,255,255,0.4)]  shadow-[rgba(255,255,255,0.90)] w-full h-fit p-4 my-4">
           <div className="test- row-span-1 col-span-1 py-2 mx-2">
             <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-base">
               Noteworthy technology acquisitions 2021

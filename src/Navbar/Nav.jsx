@@ -5,7 +5,7 @@ const Nav = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
 
   const handleScroll = () => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       if (window.scrollY > lastScrollY) {
         // Scroll Down
         setShowNavbar(false);
@@ -18,7 +18,7 @@ const Nav = () => {
   };
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       window.addEventListener("scroll", handleScroll);
       return () => {
         window.removeEventListener("scroll", handleScroll);
@@ -32,7 +32,7 @@ const Nav = () => {
         fluid
         rounded
         className={`fixed w-full border-b border-gray-200  transition-transform duration-300 ${
-          showNavbar ? 'translate-y-0' : '-translate-y-full'
+          showNavbar ? "translate-y-0" : "-translate-y-full"
         }`}
       >
         <Navbar.Brand href="https://flowbite-react.com">
@@ -43,7 +43,7 @@ const Nav = () => {
         </Navbar.Brand>
 
         <Navbar.Toggle />
-        <Navbar.Collapse>
+        <Navbar.Collapse className="transition-transform duration-[100ms] ease-in-out">
           <div className="flex items-center">
             <Navbar.Link href="#">Home</Navbar.Link>
           </div>
@@ -52,7 +52,7 @@ const Nav = () => {
           </div>
           <Navbar.Link>
             <div className="flex md:order-2">
-              <button className=" p-3 px-6  text-white bg-purple-400 hover:bg-purple-600 rounded-full baseline">
+              <button className=" flex items-center justify-center btn--start p-3 px-6  text-white bg-[#A1683B] hover:z-0  rounded-full relative ">
                 Get started
               </button>
             </div>

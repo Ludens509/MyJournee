@@ -6,13 +6,13 @@ import CardPost from "../../Components/Card/CardPost";
 const PostViewList = () => {
   return (
     <>
-      <section className=" ">
+      <section className="">
         {/* <div className="flex flex-row  w-full h-full">
           <div className="flex-1 min-w-0 p-6">
             <LayoutItem>
               <main><Outlet/></main> */}
         <PostMenu>
-          <main>
+          <main className="gradient overflow-y-scroll h-screen">
             <CardPost />
           </main>
         </PostMenu>
