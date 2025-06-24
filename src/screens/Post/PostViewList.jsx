@@ -1,8 +1,10 @@
 // import LayoutItem from "../../Components/Layouts/LayoutItem";
 // import { Outlet } from "react-router-dom";
 import PostMenu from "./PostMenu";
-import { range } from "../../utils";
-import CardPost from "../../Components/Card/CardPost";
+// import { range } from "../../utils";
+// import CardPost from "../../Components/Card/CardPost";
+import cardsData from "../../data";
+import PaginationComponent from "../../Components/Pagination/PaginationComponent";
 
 const PostViewList = () => {
   return (
@@ -13,10 +15,11 @@ const PostViewList = () => {
             <LayoutItem>
               <main><Outlet/></main> */}
         <PostMenu>
-          <main className="gradient--linear  p-4 mobile:p-2">
-            {range(3).map((i) => (
-              <CardPost key={i} />
-            ))}
+          <main className="gradient p-4 mobile:p-2">
+            {/* <CardPost data={cardsData} /> */}
+            {/* <span className="flex justify-center items-center mt-4"> */}
+            <PaginationComponent data={cardsData} />
+            {/* </span> */}
           </main>
         </PostMenu>
       </section>
