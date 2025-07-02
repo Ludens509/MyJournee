@@ -1,3 +1,4 @@
+// frontend/src/data.jsx
 const cardsData = [
   {
     id: 1,
@@ -7,6 +8,7 @@ const cardsData = [
     image: "/images/mountains.jpg",
     tag: "Adventure",
     dateposted: "2024-05-24",
+    like: false,
   },
   {
     id: 2,
@@ -15,6 +17,7 @@ const cardsData = [
     image: "/images/city.jpg",
     tag: "Urban",
     dateposted: "2024-05-24",
+    like: false,
   },
   {
     id: 3,
@@ -24,6 +27,7 @@ const cardsData = [
     image: "/images/beach.jpg",
     tag: "Relaxation",
     dateposted: "2024-05-24",
+    like: false,
   },
   {
     id: 4,
@@ -32,6 +36,7 @@ const cardsData = [
     image: "/images/forest.jpg",
     tag: "Nature",
     dateposted: "2024-05-24",
+    like: false,
   },
   {
     id: 5,
@@ -41,6 +46,7 @@ const cardsData = [
     image: "/images/culture.jpg",
     tag: "Culture",
     dateposted: "2024-05-24",
+    like: false,
   },
   {
     id: 6,
@@ -50,6 +56,7 @@ const cardsData = [
     image: "/images/food.jpg",
     tag: "Food",
     dateposted: "2024-05-24",
+    like: false,
   },
 ];
 

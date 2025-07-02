@@ -75,7 +75,7 @@ function PaginationComponent({ data }) {
                 : "text-sm/8 font-medium tracking-widest"
             }
           >
-            {num} / {totalPages}
+            {`${num}/${totalPages}`}
           </button>
         ))}
         <li>

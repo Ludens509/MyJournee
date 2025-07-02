@@ -1,12 +1,27 @@
-// import { Card } from "flowbite-react";
+import React from "react";
 import ImageTest from "../../assets/images/profile-Avatar.jpeg";
 import PopoverCollection from "../Popover/PopoverCollection";
 import PopoverTools from "../Popover/PopoverTools";
-import { GrFavorite } from "react-icons/gr";
-// import { FcLike } from "react-icons/fc";
+import { CgHeart } from "react-icons/cg";
 import PropTypes from "prop-types";
+import { FcLike } from "react-icons/fc";
 
 const CardPost = ({ data }) => {
+  const [likedPosts, setLikedPosts] = React.useState({});
+
+  // function Like(status) {
+  //   const likeBtn = status ? <FcLike size={22} /> : <CgHeart size={22} />;
+  //   return likeBtn;
+  // }
+
+  const handleLike = (id) => {
+    setLikedPosts((prev) => ({
+      ...prev,
+      [id]: !prev[id],
+    }));
+    console.log(`Post ${id} liked status:`, !likedPosts[id]);
+  };
+
   return (
     <>
       <article>
@@ -27,11 +42,27 @@ const CardPost = ({ data }) => {
               <span> posted: {item.dateposted}</span>
               <div className="flex justify-between  gap-6">
                 <span>
-                  <PopoverCollection />
+                  <PopoverCollection contents={data} />
                 </span>
-                <span>
-                  <GrFavorite size={22} />
-                </span>
+                <button
+                  title="btn-like"
+                  type="button"
+                  onClick={() => handleLike(item.id)}
+                >
+                  {likedPosts[item.id] ? (
+                    <FcLike size={22} />
+                  ) : (
+                    <CgHeart size={22} />
+                  )}
+                </button>
+                {/* <button
+                  title="btn-like"
+                  type="button"
+                  onClick={() => setFavPost(!favPost)}
+                >
+                  <Like status={item.like} />
+                </button> */}
+
                 <span>
                   <PopoverTools />
                 </span>
